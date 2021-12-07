@@ -22,15 +22,15 @@ def predict():
     if option == 'Yes':
         int_features[0] = 1
     else:
-        int_features[0] = 1
+        int_features[0] = 0
     if option1 == 'Yes':
         int_features[7] = 1
     else:
-        int_features[7] = 1
+        int_features[7] = 0
     if option2 == 'Yes':
         int_features[5] = 1
     else:
-        int_features[5] = 1
+        int_features[5] = 0
     final_features = [float(x) for x in int_features]
     final_features = [np.array(int_features)]
     final_features = sc.transform(final_features)
